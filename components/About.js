@@ -30,7 +30,7 @@ export default function About() {
               <h3 className={styles.companyName}>At Cogniq AI</h3>
               
               <p className={styles.aboutDescription}>
-                we don't just develop features, we build <span className={styles.highlight}>full-scale</span> AI systems designed for clarity, transparency, and long-term growth. From startups to enterprises, we partner with teams that want to innovate without compromising on <span className={styles.highlight}>quality.</span>
+we don&apos;t just develop features, we build <span className={styles.highlight}>full-scale</span> AI systems designed for clarity, transparency, and long-term growth. From startups to enterprises, we partner with teams that want to innovate without compromising on <span className={styles.highlight}>quality.</span>
               </p>
 
               <button className="btn btn-primary">
