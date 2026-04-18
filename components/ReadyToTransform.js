@@ -19,7 +19,7 @@ export default function ReadyToTransform() {
         <div className={styles.content}>
           <h2 className={styles.title}>Ready to transform Your Workflow?</h2>
           <p className={styles.description}>
-Let&apos;s build a clear, actionable roadmap to solve your biggest operational challenges with AI
+            Let&apos;s build a clear, actionable roadmap to solve your biggest operational challenges with AI
           </p>
           <button className="btn btn-primary">Book a Strategy Call →</button>
         </div>

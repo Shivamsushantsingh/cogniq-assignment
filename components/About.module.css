@@ -117,8 +117,7 @@
   }
 
   .accentBar {
-    width: 40px;
-    height: 250px;
+    display: none;
   }
 
   .robotImage {
@@ -141,22 +140,16 @@
 
 @media (max-width: 480px) {
   .about {
-    padding: 40px 0;
+    padding: 30px 0;
   }
 
   .aboutWrapper {
-    gap: 20px;
+    gap: 15px;
   }
 
   .aboutLeft {
     flex-direction: column;
-    gap: 15px;
-  }
-
-  .accentBar {
-    width: 6px;
-    height: 150px;
-    align-self: center;
+    gap: 10px;
   }
 
   .aboutTitle {

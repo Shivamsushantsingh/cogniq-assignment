@@ -23,6 +23,7 @@ body {
   background-color: var(--white);
   color: var(--text-dark);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 .container {
@@ -31,7 +32,18 @@ body {
   padding: 0 20px;
 }
 
-/* Buttons */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
 .btn {
   padding: 12px 28px;
   border: none;
@@ -78,48 +90,64 @@ body {
   background-color: var(--secondary-color);
 }
 
-/* Decorative Elements */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-30px);
-  }
+.header {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-/* Responsive Design */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.logo svg {
+  flex-shrink: 0;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
 @media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.2rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1rem;
-  }
-
   .nav {
     gap: 1rem;
     font-size: 0.9rem;
   }
 
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
   .btn {
     width: 100%;
     max-width: 300px;
-  }
-
-  .decoration-1,
-  .decoration-2,
-  .decoration-3,
-  .decoration-4,
-  .decoration-5 {
-    opacity: 0.08;
   }
 }
 
@@ -140,15 +168,16 @@ body {
     text-align: center;
   }
 
-  .hero-title {
-    font-size: 1.8rem;
-  }
-
-  .hero-subtitle {
-    font-size: 0.95rem;
-  }
-
   .btn-contact {
     width: 100%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-30px);
   }
 }

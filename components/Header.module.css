@@ -8,20 +8,15 @@
 
 .headerContent {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 2rem;
   padding: 1rem 0;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 1.5rem;
+  flex-shrink: 0;
   font-weight: 700;
-  color: var(--text-dark);
   text-decoration: none;
-  cursor: pointer;
   transition: color 0.3s ease;
 }
 
@@ -34,7 +29,9 @@
 }
 
 .nav {
+  flex: 1;
   display: flex;
+  justify-content: center;
   gap: 2rem;
   align-items: center;
 }
@@ -46,35 +43,91 @@
   transition: color 0.3s ease;
   padding: 0.5rem 0;
   border-bottom: 2px solid transparent;
+  white-space: nowrap;
 }
 
-.navLink:hover,
-.navLink.active {
+.navLink:hover, .navLink.active {
   color: var(--primary-color);
   border-bottom-color: var(--primary-color);
 }
 
+.btn-contact {
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  margin-left: auto;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background: var(--text-dark);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.mobileOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileNav {
+  background: var(--white);
+  width: min(90vw, 400px);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
 @media (max-width: 768px) {
   .nav {
-    gap: 1rem;
-    font-size: 0.9rem;
+    display: none;
+  }
+
+  .btn-contact {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .header {
+    border-bottom: none;
   }
 }
 
 @media (max-width: 480px) {
   .headerContent {
-    flex-direction: column;
-    gap: 1rem;
+    padding: 0.75rem 0;
   }
 
-  .nav {
-    flex-direction: column;
-    gap: 0.5rem;
-    width: 100%;
+  .mobileNav {
+    width: 95vw;
+    padding: 1.5rem;
   }
 
   .navLink {
-    width: 100%;
-    text-align: center;
+    font-size: 1.1rem;
   }
 }
