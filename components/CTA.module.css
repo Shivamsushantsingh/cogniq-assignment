@@ -1,0 +1,120 @@
+.cta {
+  padding: 40px 0;
+  background-color: #f5f3ff;
+}
+
+.ctaContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 30px;
+  background-color: #ede9ff;
+  border-radius: 12px;
+}
+
+.ctaLeft {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+
+.ctaIconWrapper {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ctaIconWrapper svg {
+  width: 32px;
+  height: 32px;
+}
+
+.ctaTitle {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.25rem;
+}
+
+.ctaSubtitle {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+.ctaButton {
+  flex-shrink: 0;
+  border: 2px solid var(--primary-color);
+  padding: 12px 28px;
+}
+
+.ctaButton:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+@media (max-width: 768px) {
+  .cta {
+    padding: 30px 0;
+  }
+
+  .ctaContent {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px;
+  }
+
+  .ctaTitle {
+    font-size: 1.15rem;
+  }
+
+  .ctaSubtitle {
+    font-size: 0.9rem;
+  }
+
+  .ctaButton {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta {
+    padding: 20px 0;
+  }
+
+  .ctaContent {
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .ctaLeft {
+    gap: 15px;
+  }
+
+  .ctaIconWrapper {
+    width: 50px;
+    height: 50px;
+  }
+
+  .ctaTitle {
+    font-size: 1rem;
+  }
+
+  .ctaSubtitle {
+    font-size: 0.85rem;
+  }
+
+  .ctaButton {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}

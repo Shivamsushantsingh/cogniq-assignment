@@ -1,0 +1,223 @@
+.process {
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+.processHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 60px;
+}
+
+.processTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  letter-spacing: -0.02em;
+  position: relative;
+  padding-bottom: 1.5rem;
+  flex: 0 0 auto;
+}
+
+.processTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+.processSubtitle {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  max-width: 300px;
+  text-align: right;
+}
+
+.processGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.processCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  height: 280px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.processCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.processImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.processOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+  z-index: 1;
+}
+
+.processBadge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.processContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.8) 50%);
+  z-index: 2;
+}
+
+.processCardTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.processDescription {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .processHeader {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .processSubtitle {
+    text-align: left;
+  }
+
+  .processTitle {
+    font-size: 1.75rem;
+  }
+
+  .processSubtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .process {
+    padding: 60px 0;
+  }
+
+  .processHeader {
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 40px;
+  }
+
+  .processTitle {
+    font-size: 1.5rem;
+  }
+
+  .processSubtitle {
+    font-size: 0.95rem;
+  }
+
+  .processGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .processCard {
+    height: 250px;
+  }
+
+  .processContent {
+    padding: 1.5rem;
+  }
+
+  .processCardTitle {
+    font-size: 1.25rem;
+  }
+
+  .processDescription {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .process {
+    padding: 40px 0;
+  }
+
+  .processTitle {
+    font-size: 1.25rem;
+  }
+
+  .processSubtitle {
+    font-size: 0.9rem;
+  }
+
+  .processGrid {
+    gap: 15px;
+  }
+
+  .processCard {
+    height: 200px;
+  }
+
+  .processBadge {
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+    top: 15px;
+    left: 15px;
+  }
+
+  .processContent {
+    padding: 1.25rem;
+  }
+
+  .processCardTitle {
+    font-size: 1rem;
+  }
+
+  .processDescription {
+    font-size: 0.85rem;
+  }
+}

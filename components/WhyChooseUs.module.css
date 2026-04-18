@@ -1,0 +1,162 @@
+.whyChooseUs {
+  padding: 60px 0;
+  background-color: #fafbff;
+}
+
+.whyWrapper {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.whyHeader {
+  flex: 0 0 30%;
+}
+
+.whyTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.whyTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+.whySubtitle {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+.whyGrid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.whyCard {
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition: all 0.3s ease;
+  border: 1px solid #e8e6ff;
+}
+
+.whyCard:hover {
+  box-shadow: 0 12px 30px rgba(79, 61, 255, 0.1);
+  transform: translateY(-4px);
+}
+
+.whyIconWrapper {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.whyIcon {
+  filter: brightness(0) invert(1);
+}
+
+.whyCardTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.whyCardDescription {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .whyWrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .whyHeader {
+    flex: 1;
+  }
+
+  .whyGrid {
+    flex: 1;
+  }
+
+  .whyTitle {
+    font-size: 1.35rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .whyChooseUs {
+    padding: 50px 0;
+  }
+
+  .whyWrapper {
+    gap: 25px;
+  }
+
+  .whyTitle {
+    font-size: 1.25rem;
+  }
+
+  .whySubtitle {
+    font-size: 0.9rem;
+  }
+
+  .whyGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .whyCard {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .whyChooseUs {
+    padding: 30px 0;
+  }
+
+  .whyTitle {
+    font-size: 1.1rem;
+  }
+
+  .whySubtitle {
+    font-size: 0.85rem;
+  }
+
+  .whyCard {
+    padding: 0.9rem;
+  }
+
+  .whyCardTitle {
+    font-size: 0.9rem;
+  }
+
+  .whyCardDescription {
+    font-size: 0.8rem;
+  }
+}
