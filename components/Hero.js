@@ -33,7 +33,7 @@ export default function Hero() {
       <div className={styles.heroContent}>
         <h1 className={styles.heroTitle}>
           Building <span className={styles.highlight}>Intelligent</span>, scalable AI
-          solutions for the <span className={styles.highlight}>Next Generation</span>
+          solutions for the <span className={styles.highlight}>Next </span>Generation
         </h1>
 
         <p className={styles.heroSubtitle}>
